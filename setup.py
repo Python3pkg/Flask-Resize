@@ -10,7 +10,7 @@ File-based and S3-based storage options are available.
 See https://flask-resize.readthedocs.io/ for documentation.
 
 """
-from __future__ import print_function
+
 
 import sys
 

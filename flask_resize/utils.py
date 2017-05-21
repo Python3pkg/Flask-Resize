@@ -85,8 +85,8 @@ def parse_rgb(v, include_number_sign=True):
     if v.startswith('#'):
         v = v[1:]
     if len(v) == 3:
-        v = u''.join(s + s for s in v)
-    return u'#' + v if include_number_sign else v
+        v = ''.join(s + s for s in v)
+    return '#' + v if include_number_sign else v
 
 
 def parse_format(image_path, format=None):

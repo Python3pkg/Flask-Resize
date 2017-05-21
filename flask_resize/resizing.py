@@ -101,7 +101,7 @@ def create_placeholder_image(width=None, height=None, message=None):
     placeholder_text = '{}x{}'.format(placeholder_width,
                                       placeholder_height)
     if message is not None:
-        placeholder_text += u' ({})'.format(message)
+        placeholder_text += ' ({})'.format(message)
     text_fill = (255, ) * 3
     bg_fill = (220, ) * 3
     img = Image.new('RGB', (placeholder_width, placeholder_height), bg_fill)

@@ -10,7 +10,7 @@ if PY3:
         return s.encode("latin-1")
 
 else:
-    string_types = basestring,  # noqa
+    string_types = str,  # noqa
 
     def b(s):
         return s

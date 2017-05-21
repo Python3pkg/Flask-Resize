@@ -24,7 +24,7 @@ class Config:
     s3_region = None
 
     def __init__(self, **config):
-        for key, val in config.items():
+        for key, val in list(config.items()):
             if key.startswith('_') or key not in dir(self):
                 raise ValueError('Not a valid config val: {}'.format(key))
             setattr(self, key, val)
@@ -52,7 +52,7 @@ class Config:
         def format_key(k):
             return k.split(prefix, 1)[1].lower()
 
-        for key, val in dict(default_overrides, **dct).items():
+        for key, val in list(dict(default_overrides, **dct).items()):
             if key.startswith(prefix):
                 setattr(config, format_key(key), val)
 
